@@ -179,5 +179,13 @@ const createIntern = async () => {
         },
     ];
 
+    const internAnswers = await inquirer.prompt(interQuestions);
     
-}
+    const intern = new intern(internAnswers);
+
+    employees.push(intern);
+    
+};
+
+//initialize the application
+init();
