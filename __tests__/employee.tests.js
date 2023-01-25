@@ -41,4 +41,4 @@ describe("Employee", () => {
             const employee = new Employee(mockEmployee);
             expect(employee.getId()).toEqual(130);
         });
-})};
+})});

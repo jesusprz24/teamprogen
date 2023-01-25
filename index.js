@@ -83,7 +83,7 @@ const createManager = async () => {
         message: "Enter employee ID:",
         name: "id",
         validate: validateInput,
-      }
+      },
       {
         type: "input",
         message: "Enter your office number:",

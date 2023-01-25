@@ -1,5 +1,3 @@
-# Team Profile Generator
-
 # teamprogen
 
 # Table of Contents
@@ -22,5 +20,6 @@ information that will be generated into the application.
 Below is a walkthrough video that explains the process.
 
 # Installation
-  1. Download Node.js and install npm
-  2. 
+  1. Download Node.js
+  2. Install npm by typing npm i inquirer@8.2.4
+  3. Then run it in the terminal by typing node index.js
