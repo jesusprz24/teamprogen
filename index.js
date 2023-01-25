@@ -1,11 +1,10 @@
 // the inquirer is imported to ask the questions to the user in order to generate the profile
 const inquirer = require('inquirer');
 const fs = require('fs');                       // fs is required to write the profile
-const employee = require('./tests/employee');   // the employee file is imported
-const manager = require('./tests/manager');     // the manager file is imported
-const engineer = require('./tests/engineer');   // the engineer file is imported
-const intern = require('./tests/intern');       // the intern file is imported
-const { generate } = require('rxjs');
+const employee = require('./tests/employee.tests.js');   // the employee file is imported
+const manager = require('./tests/manager.tests.js');     // the manager file is imported
+const engineer = require('./tests/engineer/tests.js');   // the engineer file is imported
+const intern = require('./tests/intern.tests.js');       // the intern file is imported
 const generateHTML = require()
 
 const employee = [];
@@ -13,7 +12,7 @@ const employee = [];
 // isTeamComplete will be declared as a boolean which is false
 let isTeamComplete = false;
 
-// this function will validate if the user is inputting information or not, if not it returns the message "please type your anwer before moving on"
+// this function will see if the input is valid otherwise it will prompt "please type your answer before moving on"
 const validateInput = (userInput) => {
     if (userInput === "") {
         return "please type your answer before moving on";
@@ -22,6 +21,7 @@ const validateInput = (userInput) => {
     }
 }; 
 
+// async will be used to run a long running responsive task
 const init = async () => {
     await createManager();
 
@@ -41,9 +41,6 @@ const init = async () => {
                 ],
             },
         ];
-
-        // generates the managers answers to the employee question
-        const {employeeType} = await inquirer.createPromptModule(employeeTypeQuestion);
 
         // if manager clicks none on the questions, the team is done
         if(employeeType === "none") {

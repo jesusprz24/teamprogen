@@ -1,12 +1,13 @@
-const { describe } = require("node:test");
-const Employee = require("./lib/employee");
+const Employee = require("..lib/employee");
 
+// describe allows to gather tests into seperate groupings within the same file
 describe("Employee", () => {
-    const mockEmployee = {
+    const mockEmployee = {          //using mark to see if it works
         name: "Mark",
         id: 130,
         email: "mark@code.com",
     };
+    // describe 
     describe("constructor tests", () => {
         tests("should construct a new instance of an emplyee class", () => {
             const employee = new Employee(mockEmployee);

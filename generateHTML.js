@@ -80,19 +80,6 @@ const renderIntern = (intern) => {
     return template;
 };
 
-const renderFullMarkdown = (HTML) => {
-    let template = fs.readFileSync(
-        path.resolve(templatesDir, "full-markdown.html"),
-        "utf8"
-    );
-    return replaceTemplates(template, "team", HTML);
-};
-
-//inside the double curly braces is the placeholder, 
-const replaceTemplates = (template, placeholder, value) => {
-    const pattern = new RegExp(`{{${placeholder}}}`, "gm");
-    return template.replace(pattern, value);
-};
 
 module.exports = generateHTML;
 

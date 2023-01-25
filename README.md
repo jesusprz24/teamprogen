@@ -23,7 +23,4 @@ Below is a walkthrough video that explains the process.
 
 # Installation
   1. Download Node.js and install npm
-  2. Clone the repository
-    - 
-  3. Install the npm 
-    - npm install
+  2. 
